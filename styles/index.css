@@ -112,8 +112,55 @@ input.error {
   margin: auto;
   padding: 80px 170px;
   width: 100%;
+  /* 
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  } */
 }
 
 .main > section {
   flex: 1 50%;
+}
+
+@media (max-width: 767px) {
+  .main > section {
+    flex: 100%;
+  }
+
+  .main {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .main > section {
+    flex: 100%;
+  }
+
+  .main {
+    flex-wrap: wrap;
+    padding: 14px;
+  }
+  .info {
+    text-align: center;
+  }
+  .info > h1 {
+    font-size: 35px;
+    line-height: 42px;
+  }
+
+  .btn-try {
+    line-height: 19px;
+    padding: 15px 100px;
+  }
+
+  .signup-form {
+    padding: 23px;
+  }
+
+  .follow-up {
+    text-align: center;
+    padding: 10px 56px;
+    line-height: 14px;
+  }
 }
