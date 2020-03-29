@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
+    <script src="https://use.fontawesome.com/18c282fdfd.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
       rel="stylesheet"
@@ -17,6 +18,7 @@
 
     <title>Frontend Mentor | Intro component with sign up form</title>
     <link href="styles/index.css" rel="stylesheet" />
+    <script src="js/index.js"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
@@ -42,12 +44,31 @@
         <button class="btn-try">
           <span>Try it free 7 days</span> then $20/mo. thereafter
         </button>
-        <form class="signup-form">
-          <input type="text" placeholder="First Name" />
-          <input type="text" placeholder="Last Name" />
-          <input type="email" placeholder="Email Address" />
-          <input type="password" placeholder="password" />
-          <button class="btn-signup">Claim your free trial</button>
+        <form class="signup-form" onsubmit="validateForm()">
+          <!-- <i class="fa fa-exclamation-circle" aria-hidden="true"></i> -->
+          <div class="input-group">
+            <input type="text" id="first-name" placeholder="First Name" />
+            <span class="field-error-msg"> </span>
+          </div>
+          <div class="input-group">
+            <input type="text" id="last-name" placeholder="Last Name" />
+            <span class="field-error-msg"> </span>
+          </div>
+          <div class="input-group">
+            <input
+              type="email"
+              id="email-address"
+              placeholder="Email Address"
+            />
+            <span class="field-error-msg"> </span>
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" placeholder="password" />
+            <span class="field-error-msg"> </span>
+          </div>
+          <button class="btn-signup">
+            Claim your free trial
+          </button>
           <div class="follow-up">
             <span class="terms-notice"
               >By clicking the button, you are agreeing to our</span
